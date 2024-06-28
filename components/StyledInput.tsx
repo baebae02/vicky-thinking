@@ -6,11 +6,11 @@ import { Send } from 'lucide-react';
 const StyledInput = () => {
   const [input, setInput] = useState('');
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
     setInput(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     console.log('입력된 상황:', input);
     setInput('');
