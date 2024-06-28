@@ -30,7 +30,7 @@ const HistoryInterface = () => {
 
   const [input, setInput] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (input.trim()) {
       setMessages([...messages, { id: messages.length + 1, user_message: input, bot_response: input, created_at: new Date().toISOString() }]);
