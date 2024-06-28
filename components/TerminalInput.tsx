@@ -5,11 +5,11 @@ import React, { useState } from 'react';
 const TerminalInput = () => {
   const [input, setInput] = useState('');
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
     setInput(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     // 여기에 입력값을 처리하는 로직을 추가할 수 있습니다.
     console.log('입력된 상황:', input);
