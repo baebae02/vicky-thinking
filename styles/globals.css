@@ -31,3 +31,22 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-placeholder::placeholder {
+  color: #5C5E66;
+}
+.bg-pink-000 {
+  background-color: theme('colors.custom-pink-000');
+
+}
+.bg-pink-100 {
+  background-color: theme('colors.custom-pink-100');
+}
+
+.bg-pink-300 {
+  background-color: theme('colors.custom-pink-300');
+}
+
+.color-pink-300 {
+  color: theme('colors.custom-pink-300');
+}
